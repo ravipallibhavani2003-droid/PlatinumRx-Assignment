@@ -1,4 +1,4 @@
--- Clinics Table
+
 CREATE TABLE clinics (
     cid VARCHAR(50) PRIMARY KEY,
     clinic_name VARCHAR(100),
@@ -7,14 +7,14 @@ CREATE TABLE clinics (
     country VARCHAR(50)
 );
 
--- Customer Table
+
 CREATE TABLE customer (
     uid VARCHAR(50) PRIMARY KEY,
     name VARCHAR(100),
     mobile VARCHAR(15)
 );
 
--- Clinic Sales Table
+
 CREATE TABLE clinic_sales (
     oid VARCHAR(50) PRIMARY KEY,
     uid VARCHAR(50),
@@ -26,7 +26,7 @@ CREATE TABLE clinic_sales (
     FOREIGN KEY (cid) REFERENCES clinics(cid)
 );
 
--- Expenses Table
+
 CREATE TABLE expenses (
     eid VARCHAR(50) PRIMARY KEY,
     cid VARCHAR(50),
@@ -36,7 +36,6 @@ CREATE TABLE expenses (
     FOREIGN KEY (cid) REFERENCES clinics(cid)
 );
 
--- Sample Data
 
 INSERT INTO clinics VALUES
 ('cnc-0100001', 'XYZ Clinic', 'CityA', 'StateX', 'CountryY'),
